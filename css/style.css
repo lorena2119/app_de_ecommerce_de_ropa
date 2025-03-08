@@ -103,25 +103,70 @@ nav form .filter::before{
 }
 nav ul{
     display: flex;
-    list-style: none;
-    gap: 16px;
+    flex-direction: row;
     overflow-x: scroll;
+    gap: 16px;
 }
 nav ul li{
-    height: 34px;
-    min-width: 92px;
-    border: 1px solid var(--color-4);
-    border-radius: 8px;
     display: flex;
+    flex-grow: 1;
+    height: 34px;
+    min-width: 26%;
+    list-style: none;
+    border-radius: 8px;
+    color: var(--color-4);
+    border: 1px solid var(--color-4);
     align-items: center;
-    justify-content: flex-end;
-    flex: 1;
-    padding-left: 32px;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
 }
-
 nav ul li a{
     font-size: 12px;
     font-family: "EncodeSans-Medium";
     color: var(--color-5);
     text-decoration: none;
+}
+nav ul li:nth-child(1)::before{ 
+    content: url(../storage/img/category-black.png);
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+nav ul li:nth-child(2)::before{
+    content: url(../storage/img/dress.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:nth-child(3)::before{
+    content: url(../storage/img/tshirt.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:nth-child(4)::before{
+    content: url(../storage/img/jeans.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:active{
+    background-color: var(--color-5);
+    border: none;
+}
+nav ul li:active a{
+    color: var(--color-6);
+}
+nav ul .dress:active::before{
+    content: url(../storage/img/dress-white.png);
+}
+nav ul .shirt:active::before{
+    content: url(../storage/img/tshirt-white.png);
+}
+nav ul .pants:active::before{
+    content: url(../storage/img/jeans-white.png);
+}
+nav ul .all:active::before{
+    content: url(../storage/img/category.png);
 }
