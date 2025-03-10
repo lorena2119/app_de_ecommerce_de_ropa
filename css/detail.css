@@ -38,3 +38,73 @@ header > img{
     border-radius: 16px;
     object-position: top;
 }
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    padding: 24px 0 16px 0;
+    gap: 16px;
+}
+main .name{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 37px;
+}
+main .name article:first-child{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+main .name article:first-child h1{
+    font-size: 24px;
+    font-family: "Encodesans-SemiBold";
+    color: var(--color-2);
+    line-height: 130%;
+}
+main .name article:first-child .rating-views{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+main .name article:first-child .rating-views > div{
+    display: flex;
+    gap: 4px;
+}
+main .name article:first-child .rating-views > div p:first-child{
+    font-size: 12px;
+    font-family: "Encodesans-Regular";
+    color: var(--color-1);
+    line-height: 120%;
+}
+main .name article:first-child .rating-views > div p:last-child{
+    font-size: 12px;
+    font-family: "Encodesans-Regular";
+    color: var(--color-11);
+    line-height: 120%;
+}
+main .name article:last-child input{
+    width: 31px;
+    border: none;
+    text-align: center;
+    font-size: 18px;
+    font-family: "Encodesans-Bold";
+    color: var(--color-5);
+    -moz-appearance: textfield; 
+    appearance: textfield;
+    outline: none;
+}
+main .name article:last-child input::-webkit-inner-spin-button, 
+main .name article:last-child input::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+}
+main .name article:last-child img{
+    padding: 8px;
+    object-fit: cover;
+    border: 1px solid var(--color-4);
+    border-radius: 100%;
+}
+main .name article:last-child{
+    display: flex;
+    align-items: center;
+}
