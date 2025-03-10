@@ -42,7 +42,7 @@ main{
     grid-area: main;
     display: flex;
     flex-direction: column;
-    padding: 24px 0 16px 0;
+    padding: 24px 0 0px 0;
     gap: 16px;
 }
 main .name{
@@ -107,4 +107,37 @@ main .name article:last-child img{
 main .name article:last-child{
     display: flex;
     align-items: center;
+}
+main .description{
+    width: 256px;
+}
+main .description details{
+    font-family: "Encodesans-Regular";
+    color: var(--color-1);
+    line-height: 150%;
+    font-size: 12px;
+}
+main .description details>summary{
+    list-style: none;
+}
+summary::-webkit-details-marker {
+    display: none
+}
+
+summary::after {
+    content: ' Read More. . .';
+    color: var(--color-2);
+    font-size: 14px;
+    line-height: 150%;
+    font-family: "Encodesans-SemiBold";
+}
+details[open] summary:after {
+    content: "";
+}
+hr{
+    border: none;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-15);
+    margin: 16px 0;
 }
