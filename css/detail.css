@@ -141,3 +141,60 @@ hr{
     background-color: var(--color-15);
     margin: 16px 0;
 }
+.size-color{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.size-color div > p{
+    font-size: 12px;
+    font-family: "Encodesans-Bold";
+    line-height: 150%;
+    color: var(--color-2);
+}
+.size-color div ul{
+    display: flex;
+    gap: 8px;
+    list-style: none;
+}
+.size-color div{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.size-color .size ul li{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Encodesans-Regular";
+    line-height: 150%;
+    color: var(--color-5);
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+    border: 1px solid var(--color-4);
+}
+.size-color .size ul li:active{
+    background-color: var(--color-5);
+    border: none;
+    color: var(--color-6);
+    font-family: "Encodesans-Bold";
+}
+.size-color .color ul li{
+    width: 26px;
+    height: 26px;
+    border-radius: 100%;
+}
+.size-color .color ul li:nth-child(1){
+    background-color: #ff96c7;
+}
+.size-color .color ul li:nth-child(2){
+    background-color: #f3338c;
+}
+.size-color .color ul li:nth-child(3){
+    background-color: #b90258;
+}
+.size-color .color ul li:active{
+    border: 1.5px solid #6b0136;
+}
