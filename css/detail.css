@@ -4,3 +4,37 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    display: grid;
+    grid-template-areas: "header" "main" "selection" "footer";
+    padding: 24px;
+}
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+header .icons{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    top: 16px;
+    padding: 0 16px;
+}
+header .icons img{
+   padding: 8px;
+   background-color: var(--color-6);
+   border-radius: 100%;
+   box-shadow: 0 4px 12px var(--color-13);
+   object-fit: cover;
+}
+header > img{
+    width: 100%;
+    height: 392px;
+    object-fit: cover;
+    border-radius: 16px;
+    object-position: top;
+}
