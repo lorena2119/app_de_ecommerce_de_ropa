@@ -162,6 +162,9 @@ nav ul li:active{
 nav ul li:active a{
     color: var(--color-6);
 }
+nav ul::-webkit-scrollbar{
+    display: none;
+}
 nav ul .dress:active::before{
     content: url(../storage/img/dress-white.png);
 }
@@ -186,10 +189,10 @@ main .product-1{
     /* padding-top: 24px; */
     grid-area: product1;
 }
-main .product-1 > a{
+main a{
     text-decoration: none;
 }
-main .product-1 > a:visited{
+main a:visited{
     color: transparent;
     text-decoration: none;
 }
