@@ -60,7 +60,6 @@ main .items article > img{
 main .items article .product-info{
     display: flex;
     justify-content: space-between;
-    gap: 28px;
     width: 100%;
 }
 main .items article .product-info .name-price{
@@ -69,8 +68,13 @@ main .items article .product-info .name-price{
     justify-content: space-between;
     gap: 16px;
 }
+main .items article .product-info .name-price .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
 main .items article .product-info .name-price .name p:first-child,
-main .items article .product-info .name-price>p{
+main .items article .product-info .name-price > p{
     font-size: 14px;
     color: var(--color-2);
     font-family: "Encodesans-SemiBold";
@@ -116,5 +120,78 @@ main .items > article .product-info .quantity .quantity-info img{
     object-fit: cover;
 }
 main .items hr{
-    border: 1px solid var(--color-15);
+    height: 1px;
+    border: none;
+    background-color: var(--color-15);
+}
+main .shipping-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 44px;
+}
+main .shipping-info > p{
+    font-size: 14px;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
+main .shipping-info .visa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: var(--color-14);
+    margin-bottom: 8px;
+}
+main .shipping-info .visa img{
+    object-fit: cover;
+}
+main .shipping-info .visa .visa-logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+main .shipping-info .visa .visa-logo img{
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+main .shipping-info .visa .visa-logo p:nth-child(2){
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Semibold";
+    line-height: 140%;
+}
+main .shipping-info .visa .visa-logo p:nth-child(3){
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Regular";
+    line-height: 140%;
+}
+main .shipping-info .payment-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+main .shipping-info .payment-info > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .shipping-info .payment-info > div p:first-child{
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Regular";
+}
+main .shipping-info .payment-info > div p:last-child{
+    font-size: 14px;
+    color: #171516;
+    font-family: "Encodesans-SemiBold";
+}
+main .shipping-info .payment-info hr{
+    height: 1px;
+    border: none;
+    background-color: var(--color-14);
+    margin: 4px 0 12px 0;
 }
