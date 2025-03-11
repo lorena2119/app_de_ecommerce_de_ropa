@@ -7,7 +7,7 @@
 body{
     display: grid;
     grid-template-areas: "header" "main" "footer";
-    padding: 24px;
+    padding: 24px 24px 0 24px;
 }
 header{
     grid-area: header;
@@ -15,6 +15,9 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 16px 0;
+    background-color: var(--color-9);
+    position: sticky;
+    top: 0;
 }
 header a{
     width: 40px;
@@ -194,4 +197,22 @@ main .shipping-info .payment-info hr{
     border: none;
     background-color: var(--color-14);
     margin: 4px 0 12px 0;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    background-color: var(--color-5);
+    border-radius: 45px;
+    position: sticky;
+    bottom: 0
+}
+footer a{
+    font-family: "Encodesans-Bold";
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 140%;
+    color: var(--color-6)
 }
