@@ -34,3 +34,87 @@ header p{
     color: var(--color-2);
     font-family: "Encodesans-SemiBold";
 }
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+main .items{
+    display: flex;
+    flex-direction: column;
+    padding: 24PX 0 42PX 0;
+    gap: 24px;
+}
+main .items article{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+main .items article > img{
+    width: 94px;
+    height: 70px;
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: top;
+}
+main .items article .product-info{
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+    width: 100%;
+}
+main .items article .product-info .name-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+main .items article .product-info .name-price .name p:first-child,
+main .items article .product-info .name-price>p{
+    font-size: 14px;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
+main .items article .product-info .name-price .name p:last-child{
+    font-size: 10px;
+    color: var(--color-1);
+    font-family: "Encodesans-Regular";
+}
+main .items article .product-info .quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+main .items article .product-info .quantity img{
+    padding: 10px 4px 0 0;
+}
+main .items >article .product-info .quantity .quantity-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .items >article .product-info .quantity .quantity-info input{
+    width: 31px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Encodesans-SemiBold";
+    color: var(--color-5);
+    -moz-appearance: textfield; 
+    appearance: textfield;
+    outline: none;
+}
+main .items article .product-info .quantity .quantity-info input::-webkit-outer-spin-button,
+main .items article .product-info .quantity .quantity-info input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+main .items > article .product-info .quantity .quantity-info img{
+    padding: 4px;
+    border-radius: 100%;
+    border: 1px solid var(--color-4);
+    object-fit: cover;
+}
+main .items hr{
+    border: 1px solid var(--color-15);
+}
