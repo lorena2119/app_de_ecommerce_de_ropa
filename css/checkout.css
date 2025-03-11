@@ -4,3 +4,215 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    padding: 24px 24px 0 24px;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    background-color: var(--color-9);
+    position: sticky;
+    top: 0;
+}
+header a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid var(--color-4)
+}
+header a img{
+    object-fit: cover;
+}
+header p{
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
+main{
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+}
+main .items{
+    display: flex;
+    flex-direction: column;
+    padding: 24PX 0 42PX 0;
+    gap: 24px;
+}
+main .items article{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+main .items article > img{
+    width: 94px;
+    height: 70px;
+    border-radius: 14px;
+    object-fit: cover;
+    object-position: top;
+}
+main .items article .product-info{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+main .items article .product-info .name-price{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16px;
+}
+main .items article .product-info .name-price .name{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+main .items article .product-info .name-price .name p:first-child,
+main .items article .product-info .name-price > p{
+    font-size: 14px;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
+main .items article .product-info .name-price .name p:last-child{
+    font-size: 10px;
+    color: var(--color-1);
+    font-family: "Encodesans-Regular";
+}
+main .items article .product-info .quantity{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+main .items article .product-info .quantity img{
+    padding: 10px 4px 0 0;
+}
+main .items >article .product-info .quantity .quantity-info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .items >article .product-info .quantity .quantity-info input{
+    width: 31px;
+    border: none;
+    text-align: center;
+    font-size: 14px;
+    font-family: "Encodesans-SemiBold";
+    color: var(--color-5);
+    -moz-appearance: textfield; 
+    appearance: textfield;
+    outline: none;
+}
+main .items article .product-info .quantity .quantity-info input::-webkit-outer-spin-button,
+main .items article .product-info .quantity .quantity-info input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+main .items > article .product-info .quantity .quantity-info img{
+    padding: 4px;
+    border-radius: 100%;
+    border: 1px solid var(--color-4);
+    object-fit: cover;
+}
+main .items hr{
+    height: 1px;
+    border: none;
+    background-color: var(--color-15);
+}
+main .shipping-info{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding-bottom: 44px;
+}
+main .shipping-info > p{
+    font-size: 14px;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
+main .shipping-info .visa{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background-color: var(--color-14);
+    margin-bottom: 8px;
+}
+main .shipping-info .visa img{
+    object-fit: cover;
+}
+main .shipping-info .visa .visa-logo{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+main .shipping-info .visa .visa-logo img{
+    border-radius: 4px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+main .shipping-info .visa .visa-logo p:nth-child(2){
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Semibold";
+    line-height: 140%;
+}
+main .shipping-info .visa .visa-logo p:nth-child(3){
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Regular";
+    line-height: 140%;
+}
+main .shipping-info .payment-info{
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+main .shipping-info .payment-info > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+main .shipping-info .payment-info > div p:first-child{
+    font-size: 14px;
+    color: var(--color-5);
+    font-family: "Encodesans-Regular";
+}
+main .shipping-info .payment-info > div p:last-child{
+    font-size: 14px;
+    color: #171516;
+    font-family: "Encodesans-SemiBold";
+}
+main .shipping-info .payment-info hr{
+    height: 1px;
+    border: none;
+    background-color: var(--color-14);
+    margin: 4px 0 12px 0;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 16px;
+    background-color: var(--color-5);
+    border-radius: 45px;
+    position: sticky;
+    bottom: 0
+}
+footer a{
+    font-family: "Encodesans-Bold";
+    font-size: 14px;
+    text-decoration: none;
+    line-height: 140%;
+    color: var(--color-6)
+}
