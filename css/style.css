@@ -4,3 +4,295 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    padding: 24px 24px 0 24px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* grid-template-rows: repeat(3, 1fr); */
+    grid-template-areas: "header header" "nav nav" "product1 product2" "footer footer";
+    column-gap: 17px;
+    position: relative;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header div{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+header div p:first-child{
+    font-size: 12px;
+    font-family: "EncodeSans-Regular";
+    color: var(--color-1);
+    line-height: 150%;
+}
+header div p:last-child{
+    font-size: 16px;
+    font-family: "EncodeSans-Bold";
+    color: var(--color-2);
+    line-height: 150%;
+}
+
+header img{
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 24px;
+    /* align-items: center; */
+}
+nav form{
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-top: 16px;
+}
+nav form .search{
+    flex: 1;
+    height: 100%;
+}
+nav form .search input::placeholder{
+    color: var(--color-3);
+    font-family: "EncodeSans-Regular";
+    font-size: 14px;
+}
+nav form .search::before{
+    content: url(../storage/img/search-normal.png);
+    position: absolute;
+    padding: 12px 16px;
+    width: 20px;
+    height: 20px;
+    object-fit: cover;
+}
+nav form .search input{
+    width: 100%;
+    height: 100%;
+    padding: 14px 14px 14px 44px;
+    border-radius: 8px;
+    border: 1px solid var(--color-4);
+    outline: none;
+}
+nav form .filter{
+    width: 48px;
+    height: 48px;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+nav form .filter input{
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-5);
+    border-radius: 8px;
+    border: none;
+}
+nav form .filter::before{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+    position: absolute;
+    content: url(../storage/img/Filter.png);
+}
+nav ul{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    gap: 16px;
+}
+nav ul li{
+    display: flex;
+    flex-grow: 1;
+    height: 34px;
+    min-width: 26%;
+    list-style: none;
+    border-radius: 8px;
+    color: var(--color-4);
+    border: 1px solid var(--color-4);
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    position: relative;
+}
+nav ul li a{
+    font-size: 12px;
+    font-family: "EncodeSans-Medium";
+    color: var(--color-5);
+    text-decoration: none;
+}
+nav ul li:nth-child(1)::before{ 
+    content: url(../storage/img/category-black.png);
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+nav ul li:nth-child(2)::before{
+    content: url(../storage/img/dress.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:nth-child(3)::before{
+    content: url(../storage/img/tshirt.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:nth-child(4)::before{
+    content: url(../storage/img/jeans.png);
+    width: 16px;
+    height: 16px;
+    padding: 0 4px 3px 0;
+}
+nav ul li:active{
+    background-color: var(--color-5);
+    border: none;
+}
+nav ul li:active a{
+    color: var(--color-6);
+}
+nav ul .dress:active::before{
+    content: url(../storage/img/dress-white.png);
+}
+nav ul .shirt:active::before{
+    content: url(../storage/img/tshirt-white.png);
+}
+nav ul .pants:active::before{
+    content: url(../storage/img/jeans-white.png);
+}
+nav ul .all:active::before{
+    content: url(../storage/img/category.png);
+}
+main{
+    display: contents;
+    padding-top: 24px;
+}
+main section article{
+    position: relative;
+    padding-bottom: 24px;
+} 
+main .product-1{
+    /* padding-top: 24px; */
+    grid-area: product1;
+}
+main .product-1 > a{
+    text-decoration: none;
+}
+main .product-1 > a:visited{
+    color: transparent;
+    text-decoration: none;
+}
+main .product-2{
+    /* padding-top: 24px; */
+    grid-area: product2;
+}
+main section article> img:nth-child(1){
+    position: absolute;
+    right: 14px;
+    top: 14px;
+    object-fit: cover;
+    padding: 4px;
+    background-color: var(--color-5);
+    border-radius: 100%;
+}
+main section article .info strong{
+    font-size: 14px;
+    font-family: "EncodeSans-SemiBold";
+    color: var(--color-2);
+    line-height: 150%;
+}
+main section article .info p{
+    font-size: 10px;
+    font-family: "EncodeSans-Regular";
+    color: var(--color-1);
+    line-height: 150%;
+}
+main section article .rating-price{
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    gap: 24px;
+}
+main section article .rating-price > p{
+    font-size: 14px;
+    font-family: "EncodeSans-SEmiBold";
+    color: var(--color-5);
+    line-height: 150%;
+}
+main section article .rating-price .rating{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+}
+main section article .rating-price .rating p{
+    font-size: 12px;
+    font-family: "EncodeSans-Regular";
+    color: var(--color-5);
+    line-height: 150%;
+}
+main .product-1 article > img:nth-child(2){
+    width: 100%;
+    height: 217px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+main .product-2 article > img:nth-child(2){
+    height: 251px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 16px;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    bottom: 24px;
+}
+footer .icons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 16px;
+    background-color: var(--color-5);
+    gap: 45px;
+    border-radius: 44px;
+}
+footer .icons a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: var(--color-8);
+}
+footer .icons a img{
+    width: 24px;
+    height: 24px;
+    object-fit: cover;
+}
+.difuminado{
+    width: 100%;
+    height: 66px;
+    bottom: 50px;
+    filter: blur(60px);
+    position: fixed;
+    margin: 0 24px;
+    background-color: var(--color-9);
+}
