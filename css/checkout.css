@@ -4,3 +4,33 @@
     margin: 0;
     box-sizing: border-box;
 }
+body{
+    display: grid;
+    grid-template-areas: "header" "main" "footer";
+    padding: 24px;
+}
+header{
+    grid-area: header;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+}
+header a{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    border: 1px solid var(--color-4)
+}
+header a img{
+    object-fit: cover;
+}
+header p{
+    font-size: 16px;
+    line-height: 140%;
+    color: var(--color-2);
+    font-family: "Encodesans-SemiBold";
+}
